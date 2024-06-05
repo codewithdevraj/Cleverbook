@@ -311,7 +311,7 @@ cardsContainer9.addEventListener("scroll", function () {
   const scrollLeft9 = cardsContainer9.scrollLeft;
   const maxScroll9 = cardsContainer9.scrollWidth - cardsContainer9.offsetWidth;
   if (scrollLeft9 <= 0) {
-    cardsContainer9.scrollLeft = maxScroll9 - cardWidth9 *2; // Adjusted for multiple cloned cards
+    cardsContainer9.scrollLeft = maxScroll9 - cardWidth9 ; // Adjusted for multiple cloned cards
   }
     //else if my original last card not the cloned one gets out of screen the slider scrolls to the first card
   else if (scrollLeft9 >= maxScroll9 - cardWidth9) {
@@ -320,13 +320,13 @@ cardsContainer9.addEventListener("scroll", function () {
   }
 });
 
-// Auto-scroll after a delay of 3 seconds
-setInterval(function () {
-  cardsContainer9.scrollBy({
-    left: cardWidth9 + 20,
-    behavior: "smooth",
-  });
-}, 3000);
+// // Auto-scroll after a delay of 3 seconds
+// setInterval(function () {
+//   cardsContainer9.scrollBy({
+//     left: cardWidth9 + 20,
+//     behavior: "smooth",
+//   });
+// }, 3000);
 
 
 

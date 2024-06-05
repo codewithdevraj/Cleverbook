@@ -36,7 +36,39 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
+    position: relative;
 }
+
+.navprdct{
+  display: none;
+  position: absolute;
+  top: 45px;
+  left: -20px;
+  background-color: white;
+  width: 100vw;
+  min-height: 40vh;
+  padding: 40px;
+}
+#product:hover~.navprdct{
+  display: block;
+}
+/*if navprdct is also hovered them make it display*/
+.navprdct:hover{
+  display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .navcont ul {
   display: flex;
   justify-content: center;
@@ -984,28 +1016,97 @@ main {
   
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#sec10 {
-  height: 100vh;
-  background-color: rgb(0, 0, 0);
+.sec10{
+  height: 90vh;
+  background-color: #151218;
+  margin-top: 90px;
+  padding: 90px;
 }
+.s10cont{
+  height: 100%;
+  background: linear-gradient(
+    145deg,
+    rgba(252, 144, 126, 1) 0%,
+    rgba(159, 110, 237, 1) 100%
+  
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  h2,p{
+    text-align: center;
+  }
+  h2{
+    font-size: 2.8rem;
+    font-weight: 900;
+    margin-bottom: 50px;
+  
+  }
+  p{
+    font-size: 1rem;
+    line-height: 28px;
+    margin-bottom: 30px;
+    max-width: 700px;
+  
+  }
+  button{
+    padding: 15px 20px;
+    border-radius: 25px;
+    background-color: #140f14;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+  
+  }
+}
+
+
+#sec11 {
+  min-height: 90vh;
+  background-color: #151218;
+  padding: 90px;
+}
+.s11cont{
+  height: 100%;
+}
+.fu{
+  display: flex;
+  justify-content: space-between;
+}
+.f11{
+  width: 35%;
+}
+.f11 img{
+  width: 50%;
+  margin-bottom: 20px;
+}
+.f11 p{
+  font-size: 1rem;
+  line-height: 28px;
+}
+.f12{
+  width: fit-content;
+  h2{
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+}
+.f12 ul li{
+  margin-bottom: 20px;
+  a{
+    font-size: 0.9rem;
+    font-weight: 100;
+    line-height: 26px;
+  }
+}
+.social-icons{
+  display: flex;
+  gap: 20px;
+  i{
+    font-size: 1.5rem;
+    color: rgb(204, 202, 202);
+  }
+}
+
