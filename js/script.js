@@ -346,4 +346,5 @@ window.addEventListener("scroll", addGlow);
 let hambtn = document.getElementById("hambars");
 hambtn.addEventListener("click", function () {
   document.querySelector(".navr").classList.toggle("nvactv");
+  hambtn.classList.toggle("active")
 });

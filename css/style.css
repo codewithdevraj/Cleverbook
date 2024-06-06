@@ -1197,5 +1197,9 @@ main {
 .fd{
   p{
     color: aliceblue;
+    margin-bottom: 15px;
+  }
+  .cprt{
+    font-size: 1.5rem;
   }
 }

@@ -50,12 +50,30 @@
     }
     #hamburger-1,#hamburger-3{
       width: 20px;
+      transition: all 0.3s ease-in-out;
     }
     #hamburger-2{
       width: 30px;
+      transition: all 0.3s ease-in-out;
     }
     #hamburger-3{
       transform: translateX(10px);
+    }
+  }
+  .hambars.active{
+    #hamburger-2{
+      transform: translateX(50%);
+      width: 0px;
+    }
+    #hamburger-1{
+      width: 30px;
+      transform: translate(-10px,10px)
+      rotateZ(45deg);
+    }
+    #hamburger-3{
+      width: 30px;
+      transform: translate(-10px, -10px)
+      rotateZ(-45deg);
     }
   }
   .navprdct{
@@ -71,8 +89,8 @@
 
 
   .hero{
-    height: fit-content;
-    background: linear-gradient(#140f14,rgb(31, 25, 31));
+    height: 1070px;
+    background: linear-gradient(#140f14, rgb(29 18 29));
   }
 
   .hero-wrapper{
@@ -250,6 +268,9 @@
 @media screen and (max-width:720px) {
   .row{
     padding: 0;
+  }
+  .hero{
+    height: clamp(720px, 190vw, 1070px);
   }
   .hero-wrapper{
     padding: 20px;
