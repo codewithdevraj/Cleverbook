@@ -18,8 +18,7 @@ button {
   border: none;
 }
 p,
-h3 {
-  transform: scaleY(0.9); /* Adjust the scale factor as needed */
+h3 { /* Adjust the scale factor as needed */
   color:#140f14 ;
 }
 

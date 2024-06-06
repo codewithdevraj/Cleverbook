@@ -257,7 +257,7 @@ prevButton.addEventListener("click", function () {
 
 nextButton.addEventListener("click", function () {
   cardsContainer.scrollBy({
-    left: cardWidth + 20, // include the gap between cards
+    left: cardWidth, // include the gap between cards
     behavior: "smooth",
   });
 });
