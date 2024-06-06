@@ -14,8 +14,8 @@ const pbtn3 = document.getElementById("pbtn3");
 let lastScrollPos = window.pageYOffset;
 let timeoutId = null;
 
-const sectionTop = scrollSection.offsetTop;
-const sectionHeight = scrollSection.offsetHeight;
+let sectionTop = scrollSection.offsetTop;
+let sectionHeight = scrollSection.offsetHeight;
 
 const detailsMapping = {
   1: {
@@ -81,21 +81,19 @@ function handleScroll() {
     stickyDiv.classList.remove("absolute0", "absolute1");
     stickyDiv.classList.add("fixed");
     progressBar.style.height = `${scrollProgress * 100}%`;
-    progressTip.style.transform = `translateY(${scrollProgress * 120}%)`;
+    progressTip.style.transform = `translateY(${scrollProgress * 100}%)`;
   } else {
     stickyDiv.classList.remove("fixed", "absolute1");
     stickyDiv.classList.add("absolute0");
-    progressTip.style.transform = `translateY(85%)`;
+    progressTip.style.transform = `translateY(100%)`;
   }
 
   updateScrollTextAndImage(scrollProgress);
 }
 
 function updateScrollTextAndImage(scrollProgress) {
-  let newCondition = 0;
-  if (scrollProgress >= 0 && scrollProgress < 0.2) {
-    newCondition = 1;
-  } else if (scrollProgress >= 0.2 && scrollProgress < 0.5) {
+  let newCondition = 1;
+  if (scrollProgress >= 0.2 && scrollProgress < 0.5) {
     newCondition = 2;
   } else if (scrollProgress >= 0.5 && scrollProgress <= 1) {
     newCondition = 3;
@@ -167,6 +165,10 @@ pbtn3.addEventListener("click", (e) => {
 
 window.addEventListener("scroll", handleScroll);
 
+window.addEventListener("resize", () => {
+  sectionTop = scrollSection.offsetTop;
+  sectionHeight = scrollSection.offsetHeight;
+});
 
 const logoTrack = document.querySelector(".logo-track");
 const logos = logoTrack.querySelectorAll(".hp-client-img");
@@ -184,9 +186,9 @@ function scrollLogos(timestamp) {
     startTime = timestamp; // Initial timestamp if not hovering
   }
   const progress = (timestamp - startTime) / 800; // Calculate progress (0 to 1) in 30 seconds
-  
+
   if (!isHovered) {
-    console.log(progress);
+    // console.log(progress);
     currentPosition = -logoWidth * progress; // Move logos based on progress
 
     logoTrack.style.transform = `translateX(${currentPosition}px)`;
@@ -219,7 +221,7 @@ function changecont() {
   }
 }
 
-let s6img = document.getElementById("s6img")
+let s6img = document.getElementById("s6img");
 document.querySelectorAll(".s6comp").forEach((comp) => {
   comp.addEventListener("click", function () {
     // Remove 'active' class and 'gradient-text' class from all .s6comp elements
@@ -235,7 +237,6 @@ document.querySelectorAll(".s6comp").forEach((comp) => {
     s6img.src = link.innerText;
   });
 });
-
 
 const prevButton = document.getElementById("s7prev");
 const nextButton = document.getElementById("s7next");
@@ -269,15 +270,14 @@ cardsContainer.addEventListener("scroll", function () {
   } else if (scrollLeft === maxScroll) {
     cardsContainer.scrollLeft = cardWidth;
   }
-})
+});
 // autoscroll after delay of 3 seconds
 setInterval(function () {
   cardsContainer.scrollBy({
     left: cardWidth + 20,
     behavior: "smooth",
   });
-}, 3000);
-
+}, 8000);
 
 const prevButton9 = document.getElementById("s9prv");
 const nextButton9 = document.getElementById("s9nxt");
@@ -311,24 +311,22 @@ cardsContainer9.addEventListener("scroll", function () {
   const scrollLeft9 = cardsContainer9.scrollLeft;
   const maxScroll9 = cardsContainer9.scrollWidth - cardsContainer9.offsetWidth;
   if (scrollLeft9 <= 0) {
-    cardsContainer9.scrollLeft = maxScroll9 - cardWidth9 ; // Adjusted for multiple cloned cards
+    cardsContainer9.scrollLeft = maxScroll9 - cardWidth9; // Adjusted for multiple cloned cards
   }
-    //else if my original last card not the cloned one gets out of screen the slider scrolls to the first card
+  //else if my original last card not the cloned one gets out of screen the slider scrolls to the first card
   else if (scrollLeft9 >= maxScroll9 - cardWidth9) {
     cardsContainer9.scrollLeft = cardWidth9; // Adjusted for multiple cloned cards
     //make the transition smoother
   }
 });
 
-// // Auto-scroll after a delay of 3 seconds
-// setInterval(function () {
-//   cardsContainer9.scrollBy({
-//     left: cardWidth9 + 20,
-//     behavior: "smooth",
-//   });
-// }, 3000);
-
-
+// Auto-scroll after a delay of 3 seconds
+setInterval(function () {
+  cardsContainer9.scrollBy({
+    left: cardWidth9 + 20,
+    behavior: "smooth",
+  });
+}, 5000);
 
 let section8 = document.getElementById("sec8");
 let s8image = document.getElementById("s8image");
@@ -344,3 +342,8 @@ function addGlow() {
   }
 }
 window.addEventListener("scroll", addGlow);
+
+let hambtn = document.getElementById("hambars");
+hambtn.addEventListener("click", function () {
+  document.querySelector(".navr").classList.toggle("nvactv");
+});

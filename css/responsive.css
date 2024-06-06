@@ -1,0 +1,370 @@
+@media screen and (max-width:970px) {
+  .navbar{
+    position: relative;
+    height: 70px;
+    width: 100vw;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  .navbar .navr{
+    display: none;
+  }
+  .navr.nvactv{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: -20px;
+    background-color: white;
+    height: 90vh;
+    width: calc(100% + 40px);
+    padding-bottom: 80px;
+    overflow-y: scroll;
+    align-content: flex-start;
+    ul{
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+      height: 100%;
+      width: 70vw;
+      padding-top: 80px;
+      padding-bottom: 80px;
+      overflow-y: scroll;
+      scrollbar-width: none;
+      li>a{
+        color:#140f14;
+        padding: 30px 20px;
+      }
+      
+    }
+  }
+  .hambars{
+    position: absolute;
+    right: 50px;
+    top: 30px;
+    display: block;
+    .hamburger{
+      height: 2px;
+      background-color: white;
+      margin-bottom: 8px;
+    }
+    #hamburger-1,#hamburger-3{
+      width: 20px;
+    }
+    #hamburger-2{
+      width: 30px;
+    }
+    #hamburger-3{
+      transform: translateX(10px);
+    }
+  }
+  .navprdct{
+    position: relative;
+    padding: 20px;
+    width: 80vh;
+    top: 0;
+    left: 0;
+  }
+  .nvind{
+    position: relative;
+  }
+
+
+  .hero{
+    height: fit-content;
+    background: linear-gradient(#140f14,rgb(31, 25, 31));
+  }
+
+  .hero-wrapper{
+    display: block;
+    padding-top: 80px;
+    .hleft{
+      width: 100%;
+    }
+    .hright{
+      width: 100%;
+      img{
+        width: 90%;
+        top: 50px;
+        left: 40px;
+      }
+    }
+  }
+
+  .queans{
+    padding-top: 120px;
+    h2{
+      font-size: clamp(1.2rem, 0.8286rem + 1.8571vw, 2.5rem);
+      padding: 10px 20px;
+    }
+    .qcards{
+      padding: 20px 10px;
+    }
+  }
+  .sec5 .container{
+    flex-direction: column-reverse;
+    height: auto;
+    padding: 0;
+    .right5{
+      width: 100%;
+      height: 40vh;
+      .r5image{
+        display: flex;
+        justify-content: center;
+        img{
+          height: 100%;
+          }
+      }
+      img{
+        position: static;
+        height: 100%;
+        right: 8%;
+      }
+    }
+  }
+
+  .sec6{
+    padding: 20px;
+    padding-bottom: 80px;
+    height: auto;
+    .s6cont{
+      flex-direction: column-reverse;
+      .s6right,.s6left{
+        width: 100%;
+      }
+      .s6right{
+        border-radius: 20px;
+        padding: 20px;
+        img{
+          margin-top: 5%;
+        }
+      }
+    }
+    .bggrd{
+      position: relative;
+      bottom: -40px;
+    }
+    .s6comp h3{
+      font-size: 1.2rem;
+    }
+  }
+  .sec7{
+    .s7cards{
+    width: 100%;
+    height: 100%;
+    aspect-ratio: auto;
+    .s7card{
+      flex-direction: column;
+      .s7cp{
+        width: 100%;
+        height: 50%;
+        img{
+          height: 100%;
+          width: auto;
+        }
+      }
+      .s7cp:first-child{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    }
+    #s7next{
+      right: 0px;
+    }
+    #s7prev{
+      left: 00px;
+    }
+  }
+  .sec8{
+    height: auto;
+    .s8cont{
+      height: auto;
+      display: block;
+      .s8c{
+        height: auto;
+        width: 100%;
+      }
+      .s8info{
+        width: 220px;
+        height: max-content;
+        right: 0;
+        bottom: 10px;
+        padding: 10px;
+        p,b{
+          font-size: 0.8rem;
+          line-height: 20px;
+        }
+      }
+    }
+    .s8cl img{
+      width: 92%;
+    }
+  }
+  .sec9{
+    padding: 20px;
+    height: auto;
+    width: 100vw;
+    display: block;
+    overflow: hidden;
+    .sec9l{
+      width: 100%;
+      max-width: 950px;
+      height: auto;
+      .s9u{
+        h2{
+          font-size: 24px;
+        }
+      }
+      .s9d{
+        .s8bggr{
+          margin: 20px;
+        }
+      }
+    }
+    .sec9r{
+      overflow: hidden;
+    }
+    .s9cards{
+      overflow: hidden;
+    }
+    .s9card{
+      min-width: 320px;
+      width: 48%;
+      height: auto;
+    }
+    .s9cinfo{
+      margin-top: 20px;
+    }
+  }
+  .sec10{
+    padding: 90px 40px;
+  }
+  #sec11{
+    padding: 40px;
+  }
+}
+
+
+@media screen and (max-width:720px) {
+  .row{
+    padding: 0;
+  }
+  .hero-wrapper{
+    padding: 20px;
+    padding-top: 80px;
+    .hleft{
+      h1{
+        font-size: 24px;
+        line-height: 45px;
+      }
+    }
+  }
+  .hbtn{
+    height: 40px;
+    button{
+      span{
+        font-size: 0.7rem;
+      }
+    }
+  }
+  .hleft>div img{
+    width: 100px;
+  }
+  .l5card{
+    padding: 0;
+    position: relative;
+  }
+  .card5{
+    width: 48%;
+    height: fit-content;
+    padding: 15px;
+    h2{
+      font-size: 25px;
+    }
+    p{
+      font-size: 16px;
+    }
+  }
+  .card52{
+    position: absolute;
+    bottom: 200px;
+    right: 0;
+    width: 50%;
+    height: max-content;
+  }
+  .l5btn{
+    padding: 0;
+    padding-top: 40px;
+  }
+  .sec10{
+    height: auto;
+    padding: 40px 20px;
+    .s10cont{
+      padding: 40px 10px;
+    }
+  }
+  .f11{
+    width: 90vw;
+    margin-bottom: 60px;
+  }
+  .f12{
+    margin-bottom: 40px;
+    h2{
+      font-size: 25px;
+    }
+    ul li{
+      margin-bottom: 5px;
+    }
+  }
+  .fd{
+    margin-top: 40px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .stickydiv {
+    max-height: 100vh;
+    flex-direction: column;
+  }
+  .progress-container {
+    left: 5%;
+  }
+  .pbtn {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+  .pbtnc{
+    padding: 8px 3px;
+  }
+  .countn {
+    font-size: 6rem;
+  }
+  .counts {
+    font-size: 1rem;
+  }
+  .stext{
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width:520px) {
+  .s10cont{
+    h2{
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+    }
+  }
+
+  #sec11{
+    padding: 40px 15px;
+  }
+}
+
+
+
+
+
+
+
